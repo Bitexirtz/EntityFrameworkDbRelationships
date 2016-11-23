@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneToOne", "OneToOne\OneToO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkDbRelationships.Bootstrap", "Bootstrap\EntityFrameworkDbRelationships.Bootstrap.csproj", "{95F607EE-20B4-4877-BEF1-9C3D81AD5147}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F6C313C-AF55-41AF-B2B8-E3A51B862CC9}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneToOneForwardOnly", "OneToOneForwardOnly\OneToOneForwardOnly.csproj", "{C44FACE2-3F1A-47AF-8C0D-E80012E42AD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +28,10 @@ Global
 		{95F607EE-20B4-4877-BEF1-9C3D81AD5147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95F607EE-20B4-4877-BEF1-9C3D81AD5147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95F607EE-20B4-4877-BEF1-9C3D81AD5147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44FACE2-3F1A-47AF-8C0D-E80012E42AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44FACE2-3F1A-47AF-8C0D-E80012E42AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44FACE2-3F1A-47AF-8C0D-E80012E42AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44FACE2-3F1A-47AF-8C0D-E80012E42AD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
