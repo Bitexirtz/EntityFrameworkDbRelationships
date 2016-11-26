@@ -7,3 +7,6 @@ References:
 
 Packages:
 1. EntityFramework.Utilities
+
+Study:
+1. Composite Keys

@@ -10,7 +10,7 @@ namespace OneToOneForwardOnly
 
 		static void Main (string[] args)
 		{
-			using (var dbContext = new Context.OneToOneDbContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
+			using (var dbContext = new Context.OneToOneForwardOnlyContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
 				dbContext.Students.Add (new Person {
 						PersonName = "Student No Address"
 					}
@@ -26,7 +26,7 @@ namespace OneToOneForwardOnly
 				dbContext.SaveChanges ( );
 			}
 
-			using (var dbContext = new Context.OneToOneDbContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
+			using (var dbContext = new Context.OneToOneForwardOnlyContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
 				var studList = dbContext.Students.Include (a => a.Address).ToList ( );
 				foreach (var stud in studList) {
 					Console.WriteLine ("Student: {0}", stud.PersonName);

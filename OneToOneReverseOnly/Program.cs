@@ -10,7 +10,7 @@ namespace OneToOneReverseOnly
 
 		static void Main (string[] args)
 		{
-			using (var dbContext = new Context.OneToOneDbContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
+			using (var dbContext = new Context.OneToOneReverseOnlyDbContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
 				dbContext.Students.Add (new Person
 				{
 					PersonName = "Student No Address"
@@ -31,7 +31,7 @@ namespace OneToOneReverseOnly
 				dbContext.SaveChanges ();
 			}
 
-			using (var dbContext = new Context.OneToOneDbContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
+			using (var dbContext = new Context.OneToOneReverseOnlyDbContext (EntityFrameworkDbRelationships.Bootstrap.DbConfiguration.ConnectionString)) {
 				var studAddressList = dbContext.StudentAddresses.Include (a => a.Person).ToList ();
 				foreach (var address in studAddressList) {
 					Console.WriteLine ("Student: {0}", address.Person.PersonName);

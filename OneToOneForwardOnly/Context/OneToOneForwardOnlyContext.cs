@@ -5,20 +5,22 @@ using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Reflection;
-using OneToOneReverseOnly.Entities;
+using System.Text;
+using System.Threading.Tasks;
+using OneToOneForwardOnly.Entities;
 
-namespace OneToOneReverseOnly.Context
+namespace OneToOneForwardOnly.Context
 {
-	public class OneToOneDbContext : DbContext
+	public class OneToOneForwardOnlyContext : DbContext
 	{
-		public OneToOneDbContext (string connectionString)
+		public OneToOneForwardOnlyContext (string connectionString)
 			:base(connectionString)
 		{
 			Configuration.LazyLoadingEnabled = false;
 
 			//Database.SetInitializer<OneToOneDbContext> (new CreateDatabaseIfNotExists<OneToOneDbContext> ());
 			//Database.SetInitializer<OneToOneDbContext> (new DropCreateDatabaseIfModelChanges<OneToOneDbContext> ());
-			Database.SetInitializer<OneToOneDbContext> (new DropCreateDatabaseAlways<OneToOneDbContext> ());
+			Database.SetInitializer<OneToOneForwardOnlyContext> (new DropCreateDatabaseAlways<OneToOneForwardOnlyContext> ());
 		}
 
 		#region DBSets
